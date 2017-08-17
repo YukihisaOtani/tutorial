@@ -2,3 +2,28 @@ add 変更をインデックスに登録する
 commit インデックスの状態を記録する
 pull リモートリポジトリの内容を取得する
 
+
+php
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+  <form method="GET" action="index.php">
+   <div>名前：<input type="text" name="name"></div>
+   <div>住所：<input type="text" name="addr"></div>
+   <input type="submit" value="送信">
+     <?php 
+    if($_GET[name]){
+      echo "<p>名前：" , $_GET[name] , "</p>";}
+    else  {echo'';}
+    if($_GET[addr]){
+      echo "<p>住所：" , $_GET[addr] , "</p>";}
+    else  {echo'';}
+    ?>
+   </form>
+  </body>
+</html>
+
